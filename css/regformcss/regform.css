@@ -1,0 +1,42 @@
+body{
+	background-color: #435470;
+}
+
+div.center{
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+h2{
+		color: #f7c485;
+		font-family: "Arial Black", Gadget, sans-serif;
+}
+
+label{
+	color: #f7c485;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+input{
+	color: #f7c485;
+	background-color: #435470;
+	margin-bottom: 0;
+}
+div.form-group{
+	margin-bottom:0;
+}
+input.form-group{
+	background-color: #ff9d8c;
+}
+i{
+color: #f7c485;
+}
+span.input-group-addon{
+background-color:	#435470;
+width:150;
+}
+p{
+	color: #ffa88c;
+}
+b{
+	color: #ff9d8c;
+}
