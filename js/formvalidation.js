@@ -1,14 +1,15 @@
 /**
 * @author Alexander Vladimirov
 *         <alexandervladimirov1902@gmail.com>
-* This java script is used for validation of registration form with first name, last name, password, address, EGN  (Social Security Sumber)and age.
+* This java script is used for validation of registration form with first name, last name, password, address, EGN  (Social Security Sumber)and age,
+* if validation does not pass in one or more field it dispays to client what and wy did not pass.
 *
 */
 	var message = "";
 
 /**
  * Validates Registration.
- * @return {Boolean}
+ * @return {Boolean} true if all fields are validated.
  */
 
 function formValidation(){
@@ -45,8 +46,8 @@ function formValidation(){
  */
  
 function nameValidation(name, min, max){
-	var letters =  /^[A-Za-z]{min,max}+$/;
-	if(!validContent(name, letters)){
+	var letters =  /[a-zA-Z]+$/;
+	if(!validContent(name, letters) || !validLength(name,min,max)){
 		message = constructMessage(name, message, min, max);
 		name.focus();
 	}
@@ -60,9 +61,10 @@ function nameValidation(name, min, max){
  * 
  */
 	
-function passwordValidation(password,min, max){
-	var regex = /^[a-zA-Z]\w{min,max}$/;
-	if(!validContent(password,regex)){
+function passwordValidation(password, min, max){
+	var regex = /^[a-zA-Z]\w+$/;
+	var passValue = password.value;
+	if(!validContent(password,regex) || !validLength(password,min,max)){
 		message = constructMessage(password, message, min, max);
 		password.focus();
 	}
@@ -77,8 +79,8 @@ function passwordValidation(password,min, max){
  */
 
 function addressValidation(address, min, max){
-	var regex = /^[a-zA-Z]\w{min,max}$/;
-	if(!validContent(address, regex)){
+	var text = address.value;
+	if(text===""|| !validLength(address, min, max)){
 		message = constructMessage(address, message, min, max);
 		address.focus();
 	}
@@ -93,8 +95,8 @@ function addressValidation(address, min, max){
  */
 
 function EGNValidation(EGN, min, max){
-	var numbers = /^\d{max}$/;  
-	if(!validContent(EGN,numbers)){
+	var EGNValue= parseInt(EGN.value,10);
+	if(isNaN(EGNValue)|| validLength(EGN, min, max)){
 	message = constructMessage(EGN, message, min, max);
 	EGN.focus();
 	}
@@ -117,6 +119,21 @@ function ageValidation(age, min, max){
 }
 
 /**
+* Validates lenght of given content.
+* @param {Object} object under validation.
+* @param {Number} min minimum length of object's value.
+* @param {Number} max maximum lenght of object's value.
+*
+*/
+
+function validLength(object, min , max){
+	if(object.value.length > min || object.value.length<max){
+		return true;
+	}
+	return false;
+}
+
+/**
  * Validates content of any given string.
  * @param {String} string under validation. 
  * @param {String} expresion is the given rule for the string.
@@ -135,8 +152,8 @@ function ageValidation(age, min, max){
  */
 
 function sameContent(string,string2){
-	if(string.value!=string2.value){
-	message = message + "<b>"+string.name+"</b> does not match <b>"+ string2.name +"</b>.<br>";
+	if(string.value != string2.value){
+	message = message + "<b>" + string.name + "</b> does not match <b>" + string2.name + "</b>.<br>";
 	string2.focus();
 	return false	
 	}
@@ -155,6 +172,6 @@ function sameContent(string,string2){
  */
 
 function constructMessage(object, message, min, max){
-	message = message + "<b>"+object.name+"</b> illegal content (must not be empty, smalller than <b>"+ min +"</b> or bigger than <b>"+ max + "</b>).<br>";
+	message = message + "<b>" + object.name + "</b> illegal content (must not be empty, smalller than <b>" + min + "</b> or bigger than <b>" + max + "</b>).<br>";
 	return message;
 	}
