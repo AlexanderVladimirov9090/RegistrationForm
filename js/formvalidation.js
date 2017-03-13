@@ -79,7 +79,9 @@ function passwordValidation(password, min, max){
  */
 
 function addressValidation(address, min, max){
+	var regex=/^\w+$/;
 	var text = address.value;
+	
 	if(text===""|| !validLength(address, min, max)){
 		message = constructMessage(address, message, min, max);
 		address.focus();

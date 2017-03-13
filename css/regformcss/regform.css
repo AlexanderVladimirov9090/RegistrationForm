@@ -1,42 +1,93 @@
+/*
+*	Registration form full body css.
+*	Created by: Alexander Vladimirov
+*	Github: https://github.com/AlexanderVladimirov9090
+*
+*
+* 	This style sheet is for full registration form document.
+*/
+
+/*
+	Apply background color to body.
+*/
+
 body{
 	background-color: #435470;
 }
+
+/*
+	Centers all element in this form.
+
+*/
 
 div.center{
 	margin: auto;
     width: 50%;
     padding: 10px;
 }
-h2{
+
+/*
+	Changes color and family font of given elements.
+	
+*/
+
+h2, label, input,i{
 		color: #f7c485;
 		font-family: "Arial Black", Gadget, sans-serif;
 }
 
-label{
-	color: #f7c485;
-	font-family: "Arial Black", Gadget, sans-serif;
-}
+/*
+	Changes color of element and background.
+*/
+
 input{
 	color: #f7c485;
-	background-color: #435470;
-	margin-bottom: 0;
+	background-color: #435470;	
 }
-div.form-group{
+
+
+/*
+	Setups margin-bottom so all given element are lined up perfectly.
+*/
+
+div.form-group, input{
 	margin-bottom:0;
 }
-input.form-group{
-	background-color: #ff9d8c;
-}
-i{
-color: #f7c485;
-}
+
+/*
+	Removes borders on incons next to the input boxes and setups background to transparent.
+*/
+
 span.input-group-addon{
-background-color:	#435470;
-width:150;
+	background-color:	#435470;
+	width:150;
+	border  : 0;
+	background  : transparent;
+	font-family : inherit;
+	font-size   : 1em;
+	cursor      : pointer;
 }
+
+/*
+	Changes color of warining message.
+*/
+
 p{
 	color: #ffa88c;
 }
-b{
-	color: #ff9d8c;
+/*
+	Removes borders on given submit button, setups background to transparent and makes only left and right borders visible.
+*/
+#submit{
+	margin      : 0;
+	padding     : 0;
+	border-top  : 0;
+	border-bottom :0;
+	border-left : 1;
+	border-right: 1;
+	background  : transparent;
+	font-family : inherit;
+	font-size   : 1em;
+	cursor      : pointer;
+	
 }
