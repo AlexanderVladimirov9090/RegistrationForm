@@ -75,9 +75,11 @@ span.input-group-addon{
 p{
 	color: #ffa88c;
 }
+
 /*
 	Removes borders on given submit button, setups background to transparent and makes only left and right borders visible.
 */
+
 #submit{
 	margin      : 0;
 	padding     : 0;
@@ -90,4 +92,18 @@ p{
 	font-size   : 1em;
 	cursor      : pointer;
 	
+}
+
+/*
+	Apply background color when hovering with mouse on submit button.
+*/
+#submit:hover{
+	background-color: #313d50;
+}
+
+/*
+	Apply background color when clicked on submit button.
+*/
+#submit:active{
+	background-color: #ffa88c;
 }
