@@ -1,113 +1,133 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-		<!-- Website CSS style -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+			<!-- Website CSS style -->
+			<link href="css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- Website Font style -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-		<script src="js/formvalidation.js"> </script>
-		<link rel="stylesheet" type="text/css" href="css\regformcss\regform.css">
-<title> Registration </title>
-</head>
+			<!-- Website Font style -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<!-- Google Fonts -->		
+			<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+			
+			<!-- Form validation jscript -->
+			<script src="js/formvalidation.js"> </script>
+			
+			<!-- Form registration style -->
+			<link rel="stylesheet" type="text/css" href="css\regformcss\regform.css">
+	<title> Registration </title>
+	</head>
 
-<body>
-<div class="center">
-<div class="container">
-	<div class="row main">
-		<div class="main-login main-center">
-		<h2>Register to this web page.</h2>
-		<form class="" name="registration" method="post" onSubmit="return formValidation();" >
-		
-			<div class="from-group">
-			<label for="firstName" class="cols-sm-2 control-label">First Name:</label>
-				<div class="cols-sm-10">
-					<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-					<input type="text" class="from-control" name="First name" id="firstName" placeholder="Enter your first name"/>
-					</div>
-				</div>
-			</div>
-			
-			<div class="from-group">
-			<label for="lastName" class="cols-sm-2 control-label">Last Name:</label>
-				<div class="cols-sm-10">
-					<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-					<input type="text" class="from-control" name="Last name" id="lastName" placeholder="Enter your  last name"/>
-					</div>
-				</div>
-			</div>
-			
-			<div class="form-group">
-			<label for="password" class="cols-sm-2 control-label">Password:</label>
-				<div class="cols-sm-10">
-					<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-					<input type="password" class="from-control" name="Password" id="password" placeholder="Enter your password"/>
-					</div>
-				</div>
-			</div>
-			
-			<div class="form-group">
-			<label for="confirmPassword" class="cols-sm-2 control-label">Confirm Password:</label>
-				<div class="cols-sm-10">
-					<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-					<input type="password" class="from-control" name="Confirm password" id="confirmPassword" placeholder="Confirm your password"/>
-					</div>
-				</div>
-			</div>
-			
-		<div class="from-group">
-		<label for="address" class="cols-sm-2 control-label">Address:</label>
-				<div class="cols-sm-10">
-					<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-map" aria-hidden="true"></i></span>
-					<input type="text" class="from-control" name="Address" id="address" placeholder="Enter your address" maxlength="100"/>
-					</div>
-				</div>
-			</div>
-			
-		<div class="from-group">
-			<label for="EGN" class="cols-sm-2 control-label">EGN:</label>
-				<div class="cols-sm-4">
-					<div class="input-group">
-					<span class="input-group-addon">
-					<i class="fa fa-drivers-license" aria-hidden="true"></i></span>
-					<input type="text" class="from-control" name="EGN" id="EGN" placeholder="Enter your EGN" size="15" maxlength="10"/>
-					</div>
-				</div>
-			</div>
-		
-		<div class="from-group">
-		<label for="age" class="cols-sm-2 control-label">Age:</label>
-				<div class="cols-sm-10">
-					<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-					<input type="text" class="from-control" name="Age" id="age" placeholder="Age" size="3" maxlength="3"/>
-					</div>
-				</div>
-			</div>
-			
-		<p id="message"></p>
+	<body>
+
+		<!-- Div used to center all of the elements as one -->
+		<div class="center">
+
+			<div class="container">
+
+				<div class="row main">
+					<div class="main-login main-center">
+					<h2>Register to this web page.</h2>
 				
-				<div class="form-group">
-				<input href="#" target="_self" type="submit" id="submit" class="col-xs-6" class=" btn btn=primary btn-lg btn-block login-button" value="Register"/>
+						<!-- This is the form itself -->
+						<form  name="registration" method="post" onSubmit="return formValidation();" >
+						
+							<!-- Block of first name -->
+							<div class="from-group">
+							<label for="firstName" class="cols-sm-2 control-label">First Name:</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+										<input type="text" class="from-control" name="First name" id="firstName" placeholder="Enter your first name"/>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Block of last name -->
+							<div class="from-group">
+							<label for="lastName" class="cols-sm-2 control-label">Last Name:</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+										<input type="text" class="from-control" name="Last name" id="lastName" placeholder="Enter your  last name"/>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Block of passwrod -->
+							<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password:</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+										<input type="password" class="from-control" name="Password" id="password" placeholder="Enter your password"/>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Block of confirmation of password -->
+							<div class="form-group">
+							<label for="confirmPassword" class="cols-sm-2 control-label">Confirm Password:</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+										<input type="password" class="from-control" name="Confirm password" id="confirmPassword" placeholder="Confirm your password"/>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Block of address -->
+							<div class="from-group">
+								<label for="address" class="cols-sm-2 control-label">Address:</label>
+									<div class="cols-sm-10">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-map" aria-hidden="true"></i></span>
+											<input type="text" class="from-control" name="Address" id="address" placeholder="Enter your address" maxlength="100"/>
+										</div>
+									</div>
+							</div>
+					
+							<!-- Block of EGN(Social Security Sumber) -->
+							<div class="from-group">
+								<label for="EGN" class="cols-sm-2 control-label">EGN:</label>
+									<div class="cols-sm-4">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-drivers-license" aria-hidden="true"></i></span>
+											<input type="text" class="from-control" name="EGN" id="EGN" placeholder="Enter your EGN" size="15" maxlength="10"/>
+										</div>
+									</div>
+							</div>
+
+							<!-- Block of age -->	
+							<div class="from-group">
+							<label for="age" class="cols-sm-2 control-label">Age:</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+										<input type="text" class="from-control" name="Age" id="age" placeholder="Age" size="3" maxlength="3"/>
+									</div>
+								</div>
+							</div>
+						
+							<!-- This is used to display message to the user if validation does not pass -->	
+							<p id="message"></p>
+					
+					
+							<div class="form-group">
+								<input href="#" target="_self" type="submit" id="submit" class="col-xs-6" class=" btn btn=primary btn-lg btn-block login-button" value="Register"/>
+							</div>
+					
+						</form>			
+					</div>
+						
 				</div>
-		</form>			
+
+			</div>
 		</div>
-				
-	</div>
-
-</div>
-</div>
-</body>
+	</body>
 </html>
