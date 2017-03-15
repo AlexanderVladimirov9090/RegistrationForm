@@ -15,7 +15,7 @@
 function formValidation(){
 	var firstName = document.registration.firstName;
 	var lastName = document.registration.lastName;
-	var password = document.registration.password;
+	var pass = document.registration.pass;
 	var confirmPassword = document.registration.confirmPassword;
 	var address = document.registration.address;
 	var EGN = document.registration.EGN;
@@ -23,14 +23,14 @@ function formValidation(){
 	
 	nameValidation(firstName,1,15);
 	nameValidation(lastName,1,15);
-	passwordValidation(password,6,18);
-	sameContent(confirmPassword, password);
+	passwordValidation(pass,6,18);
+	sameContent(confirmPassword, pass);
 	addressValidation(address, 1, 100);
 	EGNValidation(EGN, 10, 10);
 	ageValidation(age, 18, 118);
 
 	if(message!=""){
-	document.getElementById('message').innerHTML = "<b>Warning:</b><br>".concat(message);
+	document.getElementById('message').innerHTML = "".concat(message);
 	message="";
 	return false;
 	}
@@ -63,10 +63,10 @@ function nameValidation(name, min, max){
 	
 function passwordValidation(password, min, max){
 	var regex = /^[a-zA-Z]\w+$/;
-	var passValue = password.value;
-	if(!validContent(password,regex) || !validLength(password,min,max)){
-		message = constructMessage(password, message, min, max);
-		password.focus();
+	var passValue = pass.value;
+	if(!validContent(pass,regex) || !validLength(pass,min,max)){
+		message = constructMessage(pass, message, min, max);
+		pass.focus();
 	}
 }
 
@@ -174,6 +174,6 @@ function sameContent(string,string2){
  */
 
 function constructMessage(object, message, min, max){
-	message = message + "<b>" + object.name + "</b> illegal content (must not be empty, smalller than <b>" + min + "</b> or bigger than <b>" + max + "</b>).<br>";
+	message = message + "<br> " + object.name + " illegal content (must not be empty, smalller than " + min + " or bigger than " + max + ").<br>";
 	return message;
 	}
