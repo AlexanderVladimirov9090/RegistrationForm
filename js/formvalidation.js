@@ -174,6 +174,6 @@ function sameContent(string,string2){
  */
 
 function constructMessage(object, message, min, max){
-	message = message + "<br> " + object.name + " illegal content (must not be empty, smalller than " + min + " or bigger than " + max + ").<br>";
+	message = message + "" + object.name + " illegal content (must not be empty, smalller than " + min + " or bigger than " + max + ").<br>";
 	return message;
 	}
