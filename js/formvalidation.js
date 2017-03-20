@@ -3,6 +3,7 @@
 *         <alexandervladimirov1902@gmail.com>
 * This java script is used for validation of registration form with first name, last name, password, address, EGN  (Social Security Sumber)and age,
 * if validation does not pass in one or more field it dispays to client what and wy did not pass.
+* Still working for better adress validtion.
 *
 */
 	var message = "";
@@ -77,7 +78,7 @@ function passwordValidation(password, min, max){
  * @patam {Number} max is the maximum number of characters that are acceptable.
  * 
  */
-
+// Will make working adress validation.
 function addressValidation(address, min, max){
 	var regex=/^\w+$/;
 	var text = address.value;

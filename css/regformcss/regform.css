@@ -6,7 +6,7 @@
 *
 * 	This style sheet is for full registration form document.
 * 	Still wotking on shorter code. 
-*	To fix some code dup and order all in alphabetical order.
+*	To fix some code dup.
 */
 
 
@@ -27,8 +27,8 @@ body, h2, label, input.form-control,i{
 */
 
 label{
-	margin-left:100px;
 	background: transparent;
+	margin-left:100px;
 }
 
 /*
@@ -53,8 +53,8 @@ div.row, h2, form{
 
 div.row, h2{
 	background-color:  rgba(000, 000, 000, 0.1);
-	padding: 10px;
 	border-radius: 25px;
+	padding: 10px;
 
 }
 
@@ -71,13 +71,12 @@ h2{
 */
 
 span.input-group-addon{
-	background-color :	#435470;
-	width : 150px;
+	background: transparent;
 	border : 0px;
+	cursor : pointer;
 	font-family : inherit;
 	font-size : 1em;
-	cursor : pointer;
-	background: transparent;
+	width : 150px;
 }
 
 
@@ -86,14 +85,15 @@ span.input-group-addon{
 */
 
 h2,p{
-	display: flex;
 	align-items: center;
+	display: flex;
 	justify-content: center;
 }
 
 /*
 	Change color of the message.
 */
+
 p{
 	color: #ffa88c;
 }
@@ -109,6 +109,7 @@ p{
 /*
 	Modify widht of EGN input box.
 */
+
 #EGN{
 	width:120px;
 }
@@ -124,6 +125,7 @@ div.main	{
 /*
 	Places input to the right.
 */
+
 input.form-control{
 	right:50px;	
 }
@@ -132,25 +134,25 @@ input.form-control{
 */
 
 .btn {
-	padding: 14px 24px;
     border: 0 none;
     font-weight: 700;
     letter-spacing: 1px;
+	padding: 14px 24px;
     text-transform: uppercase;
 }
  
 .btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
 	background:  #009959;
 	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
+    outline: 0 none;
 }
  
 .btn-primary {
 	background: #32425d;
     color: #f7c485;
-	margin-left: 30px;
 	font-family: "Arial Black", Gadget, sans-serif;
+	margin-left: 30px;
 }
  
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -161,7 +163,7 @@ input.form-control{
  
 .btn-primary:active, .btn-primary.active {
     background: #009959;
-	color: #f7c485;
     box-shadow: none;
+	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
