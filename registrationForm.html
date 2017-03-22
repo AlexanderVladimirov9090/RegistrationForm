@@ -11,109 +11,106 @@
 			<!-- Website Font style -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			
-			<!-- Google Fonts -->		
+
+			<!-- Google Fonts -->
 			<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 			<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-			
+
 			<!-- Form validation jscript -->
 			<script src="js/formvalidation.js"> </script>
-			
+
 			<!-- Form registration style -->
 			<link rel="stylesheet" type="text/css" href="css/regformcss/regform.css">
-	<title> Registration </title>
+			<title> Registration </title>
 	</head>
 
 	<body>
 
-		<div class="container center">
-		
-					<div class="row main lower">
-						<div class="main-login main-center">
-						
-							<h2 class="text-center">Register to this web page.</h2>
-						
-					<!-- This is used to display message to the user if validation does not pass -->	
-								<p id="message" class="main-center"></p>
+		<div class="container roundEdges">
+
+					<div class="row main">
+						<div class="main-login">
+							<h2 class="center-text roundEdges">Register to this web page.</h2>
+						<!-- This is used to display message to the user if validation does not pass -->
+								<p id="message" class="text-center"></p>
 							<!-- This is the form itself -->
-							<form  name="registration" method="post" onSubmit="return formValidation();" >
-							
+							<form class="col-xs-6 col-xs-offset-3" name="registration" method="post" onSubmit="return formValidation();" >
+
 								<!-- Block of first name -->
 								 <div class="from-group">
-									<label for="firstName">First Name:</label>
-									<div class="input-group">
+									<label  for="firstName">First Name:</label>
+									<div class="input-group col-sm-6">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-										<input type="text" class="form-control" name="First name" id="firstName"  maxlength="16" >
+										<input type="text" class="form-control " name="First name" id="firstName"  maxlength="16" >
 									</div>
 								</div>
-								
-							
+
+
 								<!-- Block of last name -->
 								 <div class="from-group">
-									<label for="lastName">Last Name:</label>
-									<div class="input-group ">
+									<label class="col" for="lastName">Last Name:</label>
+									<div class="input-group col-sm-6">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="Last name" id="lastName"  maxlength="16">
 									</div>
 								</div>
-								
-							
+
+
 								<!-- Block of passwrod -->
 								<div class="from-group">
 									<label for="pass">Password:</label>
-									<div class="input-group ">
+									<div class="input-group col-sm-6">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 										<input type="password" class="form-control" name="Password" id="pass"  maxlength="18" >
 									</div>
 								</div>
-								
+
 								<!-- Block of confirmation of password -->
 								<div class="from-group">
 									<label for="confirmPassword">Confirm Password:</label>
-									<div class="input-group ">
+									<div class="input-group col-sm-6">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 										<input type="password" class="form-control" name="Confirm password" id="confirmPassword"  maxlength="18">
 									</div>
 								</div>
-														
+
 								<!-- Block of address -->
 								 <div class="from-group">
 									<label for="lastName">Address:</label>
 									<div class="input-group">
-										<span class="input-group-addon " style="padding-right: 10px;"><i class="fa fa-map" aria-hidden="true"></i></span>
+										<span class="input-group-addon"><i class="fa fa-map" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="Address" id="address"  maxlength="100"/>
 									</div>
 								</div>
-												
+
 								<!-- Block of EGN(Social Security Sumber) -->
 								 <div class="from-group">
 									<label for="EGN">EGN:</label>
-									<div class="input-group">
-										<span class="input-group-addon" style="padding-right: 8px;"><i class="fa fa-drivers-license" aria-hidden="true"></i></span>
+									<div class="input-group col-sm-4">
+										<span class="input-group-addon"><i class="fa fa-drivers-license" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="EGN" id="EGN"  maxlength="10"/>
 									</div>
 								</div>
-								
-								<!-- Block of age -->	
-								 <div class="from-group ">
+
+								<!-- Block of age -->
+								 <div class="from-group">
 									<label for="age">Age:</label>
-									<div class="input-group">
-										<span class="input-group-addon "><i class="fa fa-calendar" aria-hidden="true"></i></span>
-										<input type="text" class="form-control " name="Age" id="age"  maxlength="3"/>
+
+									<div class="input-group col-sm-3">
+										<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="Age" id="age"  maxlength="3"/>
 									</div>
-								</div>
-														
-								<br>
-								
+
 								<!-- This is the sumbmit button -->
-							<div class="form-group">
-								<div class="col-lg-10 col-lg-offset-2 centered">
+								<br>
+							<div class="form-group row">
+								<div class="col-xs-6 col-xs-offset-3">
 									<button type="submit" class="btn btn-primary ">Submit</button>
 								</div>
 							</div>
-												
-						</form>			
-					</div>	
+
+						</form>
+					</div>
 				</div>
 			</div>
 		</body>

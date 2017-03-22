@@ -6,6 +6,7 @@
 * Still working for better adress validtion.
 *
 */
+
 	var message = "";
 
 /**
@@ -21,11 +22,10 @@ function formValidation(){
 	var address = document.registration.address;
 	var EGN = document.registration.EGN;
 	var age = document.registration.age;
-	
+
+	passwordValidation(pass,confirmPassword,6,18);
 	nameValidation(firstName,1,15);
 	nameValidation(lastName,1,15);
-	passwordValidation(pass,6,18);
-	sameContent(confirmPassword, pass);
 	addressValidation(address, 1, 100);
 	EGNValidation(EGN, 10, 10);
 	ageValidation(age, 18, 118);
@@ -40,14 +40,15 @@ function formValidation(){
 
 /**
  * Validates any given name.
- * @param {String} name under validation. 
+ * @param {String} name under validation.
  * @param {Number} min is the minimum number of characters that are acceptable.
- * @patam {Number} max is the maximum number of characters that are acceptable.
- * 
+ * @param	 {Number} max is the maximum number of characters that are acceptable.
+ *
  */
- 
+
 function nameValidation(name, min, max){
-	var letters =  /[a-zA-Z]+$/;
+	var letters =  /^[a-zA-Z]+$/;
+
 	if(!validContent(name, letters) || !validLength(name,min,max)){
 		message = constructMessage(name, message, min, max);
 		name.focus();
@@ -56,33 +57,46 @@ function nameValidation(name, min, max){
 
 /**
  * Validates password.
- * @param {String} password under validation. 
+ * @param {String} password under validation.
  * @param {Number} min is the minimum number of characters that are acceptable.
- * @patam {Number} max is the maximum number of characters that are acceptable.
- * 
+ * @param {Number} max is the maximum number of characters that are acceptable.
+ *
  */
-	
-function passwordValidation(password, min, max){
-	var regex = /^[a-zA-Z]\w+$/;
+
+function passwordValidation(password, confirmPassword, min, max){
+	var regex = /[A-Za-z]g/;
 	var passValue = pass.value;
-	if(!validContent(pass,regex) || !validLength(pass,min,max)){
-		message = constructMessage(pass, message, min, max);
+
+	if(passValue ===""){
+		message += pass.name + " empty.<br>";
 		pass.focus();
 	}
-}
+	sameContent(confirmPassword, pass)
+
+	if(!validContent(pass,regex)){
+		message += pass.name + " invalid content.<br>";
+		pass.focus();
+	}
+	if(validLength(pass,min,max)){
+		message += pass.name+ " must be between " + min + " and " + max + ".<br>";
+		pass.focus();
+	}
+
+	}
+
 
 /**
  * Validates address.
- * @param {String} address under validation. 
+ * @param {String} address under validation.
  * @param {Number} min is the minimum number of characters that are acceptable.
- * @patam {Number} max is the maximum number of characters that are acceptable.
- * 
+ * @param {Number} max is the maximum number of characters that are acceptable.
+ *
  */
 // Will make working adress validation.
 function addressValidation(address, min, max){
-	var regex=/^\w+$/;
+	var regex=/w+,+s/;
 	var text = address.value;
-	
+
 	if(text===""|| !validLength(address, min, max)){
 		message = constructMessage(address, message, min, max);
 		address.focus();
@@ -91,10 +105,10 @@ function addressValidation(address, min, max){
 
 /**
  * Validates EGN(Social Security Sumber).
- * @param {String} EGN under validation. 
+ * @param {String} EGN under validation.
  * @param {Number} min is the minimum number of digits that are acceptable.
- * @patam {Number} max is the maximum number of digits that are acceptable.
- * 
+ * @param {Number} max is the maximum number of digits that are acceptable.
+ *
  */
 
 function EGNValidation(EGN, min, max){
@@ -107,10 +121,10 @@ function EGNValidation(EGN, min, max){
 
 /**
  * Validates Age.
- * @param {String} Age under validation. 
+ * @param {String} Age under validation.
  * @param {Number} min is the minimum age that is acceptable.
- * @patam {Number} max is the maximum age that is acceptable.
- * 
+ * @param {Number} max is the maximum age that is acceptable.
+ *
  */
 
 function ageValidation(age, min, max){
@@ -130,7 +144,7 @@ function ageValidation(age, min, max){
 */
 
 function validLength(object, min , max){
-	if(object.value.length > min || object.value.length<max){
+	if(object.value.length > min || object.value.length < max){
 		return true;
 	}
 	return false;
@@ -138,7 +152,7 @@ function validLength(object, min , max){
 
 /**
  * Validates content of any given string.
- * @param {String} string under validation. 
+ * @param {String} string under validation.
  * @param {String} expresion is the given rule for the string.
  * @return {Boolean} true if string matches the expresion rule.
  */
@@ -149,16 +163,16 @@ function validLength(object, min , max){
 
 /**
  * Validates content of any given string.
- * @param {String} string under validation. 
+ * @param {String} string under validation.
  * @param {String} string2 is the given confirm for confirming the first string.
  * @return {Boolean} true if string matches the string2.
  */
 
 function sameContent(string,string2){
 	if(string.value != string2.value){
-	message = message + "<b>" + string.name + "</b> does not match <b>" + string2.name + "</b>.<br>";
+	message = message + "<b>" + string.name + "</b> does not match <b> " + string2.name + "</b>.<br>";
 	string2.focus();
-	return false	
+	return false
 	}
 	else{
 		return true;
@@ -167,7 +181,7 @@ function sameContent(string,string2){
 
 /**
  * Constructs waring for the user where the validation did not pass.
- * @param {Object} Object that did not pass validation. 
+ * @param {Object} Object that did not pass validation.
  * @param {String} message collector of data that is going to be displayer to the user.
  * @param {Number} min minimum of the range that is used for validation of data.
  * @param {Number} max maximum of the range that is used for validation of data.

@@ -28,16 +28,14 @@ body, h2, label, input.form-control,i{
 
 label{
 	background: transparent;
-	margin-left:100px;
+
 }
 
 /*
 	Minor resizing the width of the form.
 */
 
-form{
-	width:280px;
-}
+
 
 /*
 	Sets up margin to auto for few elements.
@@ -51,19 +49,10 @@ div.row, h2, form{
 	Rounds the edges of the background and sets opacity.
 */
 
-div.row, h2{
+.roundEdges{
 	background-color:  rgba(000, 000, 000, 0.1);
 	border-radius: 25px;
-	padding: 10px;
 
-}
-
-/*
-	Resizing width of the headline.
-*/
-
-h2{
-	width:45%;
 }
 
 /*
@@ -76,7 +65,7 @@ span.input-group-addon{
 	cursor : pointer;
 	font-family : inherit;
 	font-size : 1em;
-	width : 150px;
+
 }
 
 
@@ -84,7 +73,7 @@ span.input-group-addon{
 	Centers text of headline and paragraph(message that is displayed to the user.).
 */
 
-h2,p{
+h2{
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -102,18 +91,6 @@ p{
 	Modify width of age input box. 
 */
 
-#age{
-	width:60px;
-}
-
-/*
-	Modify widht of EGN input box.
-*/
-
-#EGN{
-	width:120px;
-}
-
 /*
 	Moves down all elements 10 pixels.
 */
@@ -127,7 +104,7 @@ div.main	{
 */
 
 input.form-control{
-	right:50px;	
+	
 }
 /*
  All from here is apply to the submist button.
@@ -148,22 +125,32 @@ input.form-control{
     outline: 0 none;
 }
  
-.btn-primary {
+ /*
+	This style is about primary look of the button.
+ */
+
+ .btn-primary {
 	background: #32425d;
     color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 	margin-left: 30px;
 }
  
+ /*
+	This style is when mouse hovers over the button.
+ */
+ 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: #2c87a5;
 	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
- 
+ /*
+	This is the style of button when clicked.
+ */
 .btn-primary:active, .btn-primary.active {
     background: #009959;
-    box-shadow: none;
+    box-shadow: 3;
 	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
