@@ -24,11 +24,11 @@ function formValidation(){
 	var age = document.registration.age;
 
 	passwordValidation(pass,confirmPassword,6,18);
-	nameValidation(firstName,1,15);
-	nameValidation(lastName,1,15);
-	addressValidation(address, 1, 100);
 	EGNValidation(EGN, 10, 10);
 	ageValidation(age, 18, 118);
+	addressValidation(address, 1, 100);
+	nameValidation(firstName,1,15);
+	nameValidation(lastName,1,15);
 
 	if(message!=""){
 	document.getElementById('message').innerHTML = "".concat(message);
@@ -64,11 +64,12 @@ function nameValidation(name, min, max){
  */
 
 function passwordValidation(password, confirmPassword, min, max){
+//Regular expression for at least on digit one lowercase and uppercase characters.
 	var regex =  /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;;
 	var passValue = pass.value;
 
 	if(passValue ===""){
-		message += pass.name + " empty.<br>";
+		message += pass.name + " must not be empty.<br>";
 		pass.focus();
 	}
 
@@ -80,7 +81,7 @@ function passwordValidation(password, confirmPassword, min, max){
 	}
 
 	if(!validContent(pass,regex)){
-		message += pass.name + " must contain at least one digit, one lowercase character and one uppercase character:.<br>";
+		message += pass.name + " must contain at least one digit,<br> one lowercase and one uppercase character.<br>";
 		pass.focus();
 	}
 
@@ -94,7 +95,7 @@ function passwordValidation(password, confirmPassword, min, max){
  * @param {Number} max is the maximum number of characters that are acceptable.
  *
  */
-// Will make working adress validation.
+// Will make working adress validation. The idea is to split the string Country City Name Of Street and Number.
 function addressValidation(address, min, max){
 	var regex=/w+,+s/;
 	var text = address.value;
