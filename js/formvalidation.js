@@ -64,21 +64,23 @@ function nameValidation(name, min, max){
  */
 
 function passwordValidation(password, confirmPassword, min, max){
-	var regex = /[A-Za-z]g/;
+	var regex =  /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;;
 	var passValue = pass.value;
 
 	if(passValue ===""){
 		message += pass.name + " empty.<br>";
 		pass.focus();
 	}
+
 	sameContent(confirmPassword, pass)
 
-	if(!validContent(pass,regex)){
-		message += pass.name + " invalid content.<br>";
+	if(!validLength(pass,min,max)){
+		message += pass.value+ " must be between " + min + " and " + max + ".<br>";
 		pass.focus();
 	}
-	if(validLength(pass,min,max)){
-		message += pass.name+ " must be between " + min + " and " + max + ".<br>";
+
+	if(!validContent(pass,regex)){
+		message += pass.name + " must contain at least one digit, one lowercase character and one uppercase character:.<br>";
 		pass.focus();
 	}
 
@@ -144,7 +146,7 @@ function ageValidation(age, min, max){
 */
 
 function validLength(object, min , max){
-	if(object.value.length > min || object.value.length < max){
+	if(object.value.length >= min || object.value.length <= max){
 		return true;
 	}
 	return false;
