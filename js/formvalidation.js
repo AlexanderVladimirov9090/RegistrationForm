@@ -7,7 +7,7 @@
 *
 */
 
-	var message = "";
+	var message = "Waring:<br>";
 
 /**
  * Validates Registration.
