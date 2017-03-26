@@ -10,12 +10,11 @@
 */
 
 
-
 /*
 	Apply background color and font family.
 */
 
-body, h2, label, input.form-control,i{
+ .font-applicator{
 	background-color : #435470;
 	color : #f7c485;
 	font-weight : bold;
@@ -42,13 +41,11 @@ body, h2, label, input.form-control,i{
 }
 
 /*
-	Apply background color size and transperancy to span.
+	Apply background transperancy to icons.
 */
 
 span.input-group-addon{
 	background: transparent;
-	border : 0px;
-	cursor : pointer;
 }
 
 /*
