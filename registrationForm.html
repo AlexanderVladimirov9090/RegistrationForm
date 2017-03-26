@@ -27,19 +27,19 @@
 
 <body>
 
-		<div class="container roundEdges">
+		<div class="container  roundEdges">
 
 				<!-- This is used as the main row divider. -->
 					<div class="row-fluid main">
 						<div class="main-login">
-							<h2 class="center-text roundEdges col-xs-6 col-xs-offset-3">Register to this web page.</h2>
+							<h2 class="text-center roundEdges col-xs-6 col-xs-offset-3">Register to this web page.</h2>
 							<!-- This is the form itself -->
 							<form class="col-xs-6 col-xs-offset-3" name="registration" method="post" onSubmit="return formValidation();" >
 
 								<!-- Block of first name -->
 								 <div class="from-group">
 
-									<label  for="firstName">First Name:</label>
+									<label  for="firstName " class="transarentAndMoveLeft">First Name:</label>
 									<div class="input-group  col-sm-6 col-lg-8">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 										<input type="text" class="form-control " name="First name" id="firstName"  maxlength="16" >
@@ -50,7 +50,7 @@
 								<!-- Block of last name -->
 								 <div class="from-group">
 
-									<label class="col" for="lastName">Last Name:</label>
+									<label  for="lastName" class="transarentAndMoveLeft">Last Name:</label>
 									<div class="input-group  col-sm-6 col-lg-8">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="Last name" id="lastName"  maxlength="16">
@@ -61,7 +61,7 @@
 								<!-- Block of passwrod -->
 								<div class="from-group">
 
-									<label for="pass">Password:</label>
+									<label for="pass" class="transarentAndMoveLeft">Password:</label>
 									<div class="input-group  col-sm-6 col-lg-8">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 										<input type="password" class="form-control" name="Password" id="pass"  maxlength="18" >
@@ -71,7 +71,7 @@
 								<!-- Block of confirmation of password -->
 								<div class="from-group">
 
-									<label for="confirmPassword">Confirm Password:</label>
+									<label for="confirmPassword" class="transarentAndMoveLeft">Confirm Password:</label>
 									<div class="input-group  col-sm-6 col-lg-8">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 										<input type="password" class="form-control" name="Confirm password" id="confirmPassword"  maxlength="18">
@@ -81,7 +81,7 @@
 								<!-- Block of address -->
 								 <div class="from-group">
 
-									<label for="lastName">Address:</label>
+									<label for="lastName" class="transarentAndMoveLeft">Address:</label>
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-map" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="Address" id="address"  maxlength="100"/>
@@ -91,7 +91,7 @@
 								<!-- Block of EGN(Social Security Sumber) -->
 								 <div class="from-group">
 
-									<label for="EGN">EGN:</label>
+									<label for="EGN" class="transarentAndMoveLeft">EGN:</label>
 									<div class="input-group  col-sm-4 ">
 										<span class="input-group-addon"><i class="fa fa-drivers-license" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="EGN" id="EGN"  maxlength="10"/>
@@ -101,18 +101,19 @@
 								<!-- Block of age -->
 								 <div class="from-group">
 
-									<label for="age">Age:</label>
+									<label for="age" class="transarentAndMoveLeft">Age:</label>
 									<div class="input-group  col-sm-3 ">
 										<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
 										<input type="text" class="form-control" name="Age" id="age"  maxlength="3"/>
 									</div>
 
-								<!-- This is the sumbmit button -->
-								<br>
-								<!-- This is used to display message to the user if validation does not pass -->
 
-								<p id="message" class="text-center row"></p>
-							<div class="form-group  center-block col-xs-offset-3">
+
+								<!-- This is used to display message to the user if validation does not pass -->
+							<p id="message" class="text-center row .warningColor"></p>
+
+							<!-- This is the sumbmit button -->
+							<div class="form-group">
 									<button type="submit" class="btn btn-primary ">Submit</button>
 							</div>
 

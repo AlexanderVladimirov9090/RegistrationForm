@@ -5,8 +5,8 @@
 *
 *
 * 	This style sheet is for full registration form document.
-* 	Still wotking on shorter code. 
-*	To fix some code dup.
+*   Applied backgound color, font, color, round edges and some minor moving on the elements.
+*
 */
 
 
@@ -26,24 +26,11 @@ body, h2, label, input.form-control,i{
 	Little adjustment of margin and apply background transperancy to the lables.
 */
 
-label{
+.transarentAndMoveLeft{
 	background: transparent;
-
+  margin-left:35px;
 }
 
-/*
-	Minor resizing the width of the form.
-*/
-
-
-
-/*
-	Sets up margin to auto for few elements.
-*/
-
-div.row, h2, form{
-	margin: auto;
-}
 
 /*
 	Rounds the edges of the background and sets opacity.
@@ -52,7 +39,6 @@ div.row, h2, form{
 .roundEdges{
 	background-color:  rgba(000, 000, 000, 0.1);
 	border-radius: 25px;
-
 }
 
 /*
@@ -63,85 +49,53 @@ span.input-group-addon{
 	background: transparent;
 	border : 0px;
 	cursor : pointer;
-	font-family : inherit;
-	font-size : 1em;
-
-}
-
-
-/*
-	Centers text of headline and paragraph(message that is displayed to the user.).
-*/
-
-h2{
-	align-items: center;
-	display: flex;
-	justify-content: center;
 }
 
 /*
 	Change color of the message.
 */
 
-p{
+.warningColor{
 	color: #ffa88c;
 }
 
-/*
-	Modify width of age input box. 
-*/
 
-/*
-	Moves down all elements 10 pixels.
-*/
-
-div.main	{
-	margin-top:10px;
-}
-
-/*
-	Places input to the right.
-*/
-
-input.form-control{
-	
-}
 /*
  All from here is apply to the submist button.
 */
 
 .btn {
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-	padding: 14px 24px;
-    text-transform: uppercase;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 14px 24px;
+  text-transform: uppercase;
 }
- 
+
 .btn:focus, .btn:active:focus, .btn.active:focus {
-	background:  #009959;
+  background:  #009959;
 	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
-    outline: 0 none;
+  outline: 0 none;
 }
- 
+
  /*
 	This style is about primary look of the button.
  */
 
  .btn-primary {
 	background: #32425d;
-    color: #f7c485;
+  color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 	margin-left: 30px;
 }
- 
+
  /*
 	This style is when mouse hovers over the button.
  */
- 
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #2c87a5;
+  background: #2c87a5;
 	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
@@ -149,8 +103,8 @@ input.form-control{
 	This is the style of button when clicked.
  */
 .btn-primary:active, .btn-primary.active {
-    background: #009959;
-    box-shadow: 3;
+  background: #009959;
+  box-shadow: 3;
 	color: #f7c485;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
