@@ -30,9 +30,9 @@ function formValidation(){
 	nameValidation(firstName,1,15);
 	nameValidation(lastName,1,15);
 
-	if(message!=""){
+	if(message!="Waring:<br>"){
 	document.getElementById('message').innerHTML = "".concat(message);
-	message="";
+	message="Waring:<br>";
 	return false;
 	}
 	return true;
@@ -116,7 +116,7 @@ function addressValidation(address, min, max){
 
 function EGNValidation(EGN, min, max){
 	var EGNValue= parseInt(EGN.value,10);
-	if(isNaN(EGNValue)|| validLength(EGN, min, max)){
+	if(isNaN(EGNValue)|| EGN.lenght<10){
 	message = constructMessage(EGN, message, min, max);
 	EGN.focus();
 	}
@@ -192,6 +192,6 @@ function sameContent(string,string2){
  */
 
 function constructMessage(object, message, min, max){
-	message = message + "" + object.name + " illegal content (must not be empty, < " + min + " or > " + max + ").<br>";
+	message = message + "" + object.name + " illegal content (is empty, or not between interval, " + min + ", " + max + ").<br>";
 	return message;
 	}
